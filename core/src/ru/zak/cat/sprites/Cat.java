@@ -40,7 +40,7 @@ public class Cat {
 
 
         public void jump() {
-            velosity.y = 200;
+            velosity.y = 100;
         }
 
         public Rectangle getBoundsCat() {

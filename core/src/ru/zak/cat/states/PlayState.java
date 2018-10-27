@@ -32,7 +32,7 @@ public class PlayState extends State {
         this.gsm = gsm;
         cat = new Cat(0, 0);
         camera.setToOrtho(false, MyCatJump.WIDTH/2, MyCatJump.HEIGHT/2);
-        bg = new Texture("fon.png");
+        bg = new Texture("Picture.png");
         font = new BitmapFont();
         awards = new Array<Award>();
         for (int i = 0; i < AWARD_COUNT; i++) {
