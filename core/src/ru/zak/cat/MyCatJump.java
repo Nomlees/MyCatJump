@@ -35,6 +35,7 @@ public class MyCatJump extends ApplicationAdapter {
 		gsm.render(batch);
 	}
 
+
 	@Override
 	public void dispose () {
 		batch.dispose();
