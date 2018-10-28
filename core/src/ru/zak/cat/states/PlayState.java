@@ -16,9 +16,9 @@ import ru.zak.cat.sprites.Award;
 
 public class PlayState extends State {
 
-    public static final int AWARD_SPACING = 200;
-    public static final int BLOCK_SPACING = 200;
-    public static final int BLOCK_COUNT = 100;
+    public static final int AWARD_SPACING = 300;
+    public static final int BLOCK_SPACING = 300;
+    public static final int BLOCK_COUNT = 200;
     public static final int AWARD_COUNT = 200;
 
     protected GameStateManager gsm;
@@ -47,7 +47,7 @@ public class PlayState extends State {
            awards.add(new Award(i * (AWARD_SPACING + Award.AWARD_WIDTH)));
         }
         for (int i = 0; i < BLOCK_COUNT; i++) {
-            blocks.add(new Block(i * (BLOCK_SPACING + Block.BLOCK_HEIGHT)));
+            blocks.add(new Block(i * (BLOCK_SPACING + Block.BLOCK_WIDTH)));
         }
 
     }
@@ -79,7 +79,7 @@ public class PlayState extends State {
             sb.draw(block.getBlock(), block.getPosBlock().x, block.getPosBlock().y);
         }
         for (Award award : awards) {
-            sb.draw(award.getBotAward(), award.getPosBotAward().x, award.getPosBotAward().y);
+            sb.draw(award.getAward(), award.getPosAward().x, award.getPosAward().y);
         }
 
         font.draw(sb, "Score: " + countCoins, camera.position.x, 240);

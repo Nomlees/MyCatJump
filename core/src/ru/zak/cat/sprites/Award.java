@@ -8,23 +8,23 @@ import com.badlogic.gdx.math.Vector2;
 public class Award {
 
     public static final int AWARD_WIDTH = 100;
-    private Texture botAward;
-    private Vector2 posBotAward;
+    private Texture award;
+    private Vector2 posAward;
     private Rectangle botCoins;
 
-    public Texture getBotAward() {
-        return botAward;
+    public Texture getAward() {
+        return award;
     }
 
 
-    public Vector2 getPosBotAward() {
-        return posBotAward;
+    public Vector2 getPosAward() {
+        return posAward;
     }
 
     public Award(float x){
-        botAward = new Texture("lac.png");
-        posBotAward = new Vector2(x, 100);
-        botCoins = new Rectangle(posBotAward.x , posBotAward.y , botAward.getWidth() , botAward.getHeight());
+        award = new Texture("lac.png");
+        posAward = new Vector2(x, 70);
+        botCoins = new Rectangle(posAward.x , posAward.y , award.getWidth() , award.getHeight());
     }
 
     public Rectangle getRectangleCoinBot () {

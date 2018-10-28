@@ -5,7 +5,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 public class Block {
-    public static final int BLOCK_HEIGHT = 100;
+    public static final int BLOCK_WIDTH = 100;
     private Texture block;
     private Vector2 posBlock;
     private Rectangle botCoins;
@@ -21,7 +21,7 @@ public class Block {
     }
 
     public Block (float x){
-        block = new Texture("block.png");
+        block = new Texture("block1.png");
         posBlock = new Vector2(x, 0);
         botCoins = new Rectangle(posBlock.x , posBlock.y , block.getWidth() , block.getHeight());
     }
