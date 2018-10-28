@@ -23,7 +23,7 @@ public class Award {
 
     public Award(float x){
         botAward = new Texture("lac.png");
-        posBotAward = new Vector2(x, 0);
+        posBotAward = new Vector2(x, 100);
         botCoins = new Rectangle(posBotAward.x , posBotAward.y , botAward.getWidth() , botAward.getHeight());
     }
 

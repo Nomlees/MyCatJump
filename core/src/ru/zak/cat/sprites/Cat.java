@@ -14,7 +14,7 @@ public class Cat {
 
         public Cat(int x, int y) {
             position = new Vector3(x,y,0);
-            velosity = new Vector3(0,0,0);
+            velosity = new Vector3(0,90,0);
             cat = new Texture("2.png");
             boundsCat = new Rectangle(x,y, cat.getWidth(), cat.getHeight());
         }
@@ -28,19 +28,19 @@ public class Cat {
         }
 
         public void update(float dt) {
-            if (position.y > 0 )
+            if (position.y > 90 )
                 velosity.add(0 , GRAVITY , 0);
             velosity.scl(dt);
             position.add(MOVEMENT * dt,velosity.y, 0);
-            if (position.y < 0 )
-                position.y = 0;
+            if (position.y < 90 )
+                position.y = 90;
             velosity.scl(1 / dt);
             boundsCat.setPosition(position.x , position.y);
         }
 
 
         public void jump() {
-            velosity.y = 100;
+            velosity.y = 300;
         }
 
         public Rectangle getBoundsCat() {
