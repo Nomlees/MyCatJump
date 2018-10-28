@@ -15,6 +15,7 @@ public class Block {
     }
 
 
+
     public Vector2 getPosBlock() {
         return posBlock;
     }
