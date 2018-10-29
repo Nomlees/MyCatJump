@@ -5,6 +5,9 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 
+/**
+ * Класс котика, задаются позиция котика, его техтура, анимация и скорость прыжка
+ */
 
 public class Cat {
         private static final int MOVEMENT = 100;
@@ -17,7 +20,7 @@ public class Cat {
 
         public Cat(int x, int y) {
             position = new Vector3(x,y,0);
-            velosity = new Vector3(0,50,0);
+            velosity = new Vector3(0,0,0);
 //            cat = new Texture("2.png");
             cat = new Texture("catatlas.png");
             catAnimation = new Animation(new TextureRegion(cat), 5, 0.8f);
@@ -25,10 +28,10 @@ public class Cat {
             boundsCat = new Rectangle(x,y, cat.getWidth()/5, cat.getHeight());
         }
 
-    public TextureRegion getCat() {
+        public TextureRegion getCat() {
 
-        return catAnimation.getFrame();
-    }
+            return catAnimation.getFrame();
+        }
 
         public Vector3 getPosition() {
             return position;
@@ -38,6 +41,10 @@ public class Cat {
 //            return cat;
 //        }
 
+    /**
+     * Метод установки нижней границы экрана
+     * @param dt - определённые промежутки времени
+     */
         public void update(float dt) {
             catAnimation.update(dt);
             if (position.y > 50 )

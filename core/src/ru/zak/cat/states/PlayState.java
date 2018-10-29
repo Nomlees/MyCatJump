@@ -14,6 +14,10 @@ import ru.zak.cat.sprites.Block;
 import ru.zak.cat.sprites.Cat;
 import ru.zak.cat.sprites.Award;
 
+/**
+ * Класс игрового экрана
+ */
+
 public class PlayState extends State {
 
     public static final int AWARD_SPACING = 300;
@@ -28,7 +32,7 @@ public class PlayState extends State {
     private Texture bg;
     private BitmapFont font;
     private Array<Award> awards;
-    private Block block;
+
     private Array<Block> blocks;
     private int countCoins;
 
@@ -40,7 +44,6 @@ public class PlayState extends State {
         camera.setToOrtho(false, MyCatJump.WIDTH/2, MyCatJump.HEIGHT/2);
         bg = new Texture("Picture.png");
         font = new BitmapFont();
-        block = new Block(100);
         blocks = new Array<Block>();
         awards = new Array<Award>();
         for (int i = 0; i < AWARD_COUNT; i++) {
@@ -54,10 +57,8 @@ public class PlayState extends State {
 
 
     protected void handleInput() {
-
         if (Gdx.input.justTouched())
             cat.jump();
-
     }
 
     @Override

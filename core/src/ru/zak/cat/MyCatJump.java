@@ -31,6 +31,7 @@ public class MyCatJump extends ApplicationAdapter {
 	@Override
 	public void render () {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		//возвращает время между прошедшим и текущим кадром в секундах
 		gsm.update(Gdx.graphics.getDeltaTime());
 		gsm.render(batch);
 	}

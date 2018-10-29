@@ -3,6 +3,10 @@ package ru.zak.cat.sprites;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.utils.Array;
 
+/**
+ * Класс анимации
+ */
+
 public class Animation {
     private Array<TextureRegion> frames;
     private float maxFrameTime;
@@ -21,6 +25,11 @@ public class Animation {
         maxFrameTime = cycleTime / frameCount;
         frame = 0;
     }
+
+    /**
+     * Метод проверки длительности отображения кадра
+     */
+
     public void update(float dt){
 
         currentFrameTime += dt;
@@ -31,6 +40,11 @@ public class Animation {
         if (frame >= frameCount)
             frame = 0;
     }
+
+    /**
+     * Метод получения текущего кадра анимации
+     * @return
+     */
     public  TextureRegion getFrame(){
         return frames.get(frame);
     }

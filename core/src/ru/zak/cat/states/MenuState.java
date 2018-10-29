@@ -19,6 +19,10 @@ public class MenuState extends State{
         menuCat = new Texture("catMenu.png");
     }
 
+    /**
+     * Осуществляется проверка на клик,
+     * а затем методом set убираем экран меню
+     */
     @Override
     protected void handleInput() {
         if(Gdx.input.justTouched()){
